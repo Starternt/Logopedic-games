@@ -1,0 +1,25 @@
+.header {
+    height: 270px;
+    display: block;
+    background-color: black;
+    background: url('/images/header.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.head{
+}
+
+body {
+    background: url('/images/backgroundImage.png') no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.left{
+    position: absolute;
+    float: left;
+    margin-top: 30px;
+}
+#navheader{
+    background-color: pink;
+    border-color: plum;
+    border-bottom-width: 3px;
+}
