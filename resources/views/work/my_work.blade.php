@@ -23,7 +23,7 @@
                                 enim eos, excepturi illum iste itaque iure libero maiores molestias, nobis odio possimus provident
                                 quaerat qui repudiandae saepe sed tenetur, ullam. Commodi cum, sapiente!
                         </div>
-                        <a href="/my-work/1">
+                        <a href="/work/1">
                             <div class="btn btn-default" style="position:absolute; bottom: 28px; right: 30px;">Открыть
                                 страницу с фотографией
                             </div>
@@ -54,7 +54,7 @@
                                 enim eos, excepturi illum iste itaque iure libero maiores molestias, nobis odio possimus provident
                                 quaerat qui repudiandae saepe sed tenetur, ullam. Commodi cum, sapiente!
                         </div>
-                        <a href="/my-work/1">
+                        <a href="/work/1">
                             <div class="btn btn-default" style="position:absolute; bottom: 28px; right: 30px;">Открыть
                                 страницу с фотографией
                             </div>
@@ -85,7 +85,7 @@
                                 enim eos, excepturi illum iste itaque iure libero maiores molestias, nobis odio possimus provident
                                 quaerat qui repudiandae saepe sed tenetur, ullam. Commodi cum, sapiente!
                         </div>
-                        <a href="/my-work/1">
+                        <a href="/work/1">
                             <div class="btn btn-default" style="position:absolute; bottom: 28px; right: 30px;">Открыть
                                 страницу с фотографией
                             </div>

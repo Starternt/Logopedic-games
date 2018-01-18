@@ -11,13 +11,10 @@
                 <a href="/"><i class="fa fa-fw fa-home"></i> Главная</a>
             </li>
             <li>
-                <a href="/my-work"><i class="fa fa-fw fa-twitter"></i> Моя творческая деятельность</a>
+                <a href="/work"><i class="fa fa-fw fa-cog"></i> Мои увлечения</a>
             </li>
             <li>
-                <a href="/work"><i class="fa fa-fw fa-cog"></i> Моё творчество</a>
-            </li>
-            <li>
-                <a href="/games"><i class="fa fa-fw fa-bank"></i> Игры</a>
+                <a href="/games"><i class="fa fa-fw fa-bank"></i> Логопедические игры</a>
             </li>
             <li>
                 <a href="/photos"><i class="fa fa-fw fa-dropbox"></i> Фотогалерея</a>

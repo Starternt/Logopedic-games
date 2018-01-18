@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/admin_main.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -40,7 +39,7 @@
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <h5>
-                                <a href="/admin"><i class="fa fa-edit"></i> Админпанель</a>
+                                <a href="/admin/cabinet"><i class="fa fa-edit"></i> Админпанель</a>
                             </h5>
                         </div>
                     </div>
@@ -55,17 +54,16 @@
             </div>
         </div>
     </header>
-    <div class="page-buffer"></div>
 </div>
 
 @yield('content')
 
-<footer id="footer" class="page-footer">
+<footer class="footer" id="footer">
     <div class="footer-bottom">
         <div class="container">
-            <div class="row">
-                <p class="pull-left">Это подземелье сайта и здесь расположен текст</p>
-                <p class="pull-right">Панель администратора</p>
+            <div class="row ">
+                <p class="pull-left"></p>
+                <p class="pull-right" style="padding-top: 15px;">Панель администратора</p>
             </div>
         </div>
     </div>
