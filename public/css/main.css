@@ -19,7 +19,70 @@ body {
     margin-top: 30px;
 }
 #navheader{
-    background-color: pink;
-    border-color: plum;
+    background-color: #e67e22;
+    border-color: #D35400;
     border-bottom-width: 3px;
+}
+#app-navbar-collapse ul li a{
+    color: #ECF0F1;
+}
+#brand{
+    color: #ECF0F1;
+}
+.education-content{
+    background-color: #fff;
+    /*height: 700px;*/
+    border-radius: 10px;
+    box-shadow: 1px 0 5px -1px rgba(0,0,0,0.5);
+    margin-top:30px;
+}
+.file-header{
+    margin: 0;
+    padding-bottom: 17px;
+    margin-top: -7px;
+}
+.size-and-date{
+    color: darkgray;
+}
+.down-button-container{
+    margin-top: -15px;
+    margin-left: 50px;
+}
+.down-button{
+    margin-left: 30px;
+}
+.work-container{
+    margin-top: 30px;
+}
+.work-container-item{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+    margin-bottom: 0px;
+}
+.work-content{
+    min-height: 330px;
+    margin-top: 15px;
+}
+.work-categories{
+    float:left;
+    position: fixed;
+}
+.comments{
+    font-weight: bold;
+    margin-top: 20px;
+}
+.comments-user{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+}
+.comments-date{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.comments-message{
+    margin-bottom: 20px;
 }

@@ -2,8 +2,6 @@
 
 @section('content')
 
-    {{--<link rel="stylesheet" href="{{asset('/css/main.css')}}">--}}
-    {{--<link rel="stylesheet" href="{{asset('/css/test.less')}}">--}}
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 col-md-offset-3 head">
@@ -13,56 +11,9 @@
     </div>
 
     <div class="container-fluid">
-        <div class="row left">
-            <div class="col-md-3 ">
+        <div class="row">
 
-                <!-- Sidebar -->
-                <nav class="navbar navbar-inverse" id="sidebar-wrapper" role="navigation">
-                    <ul class="nav sidebar-nav">
-                        <li class="sidebar-brand">
-                            <a href="#">
-                                Категории
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/"><i class="fa fa-fw fa-home"></i> Главная</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-folder"></i> Образовательная деятельность</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-file-o"></i> Информация для родителей</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-cog"></i> Моё творчество</a>
-                        </li>
-                        {{--<li class="dropdown">--}}
-                            {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i>--}}
-                                {{--Dropdown--}}
-                                {{--<span class="caret"></span></a>--}}
-                            {{--<ul class="dropdown-menu" role="menu">--}}
-                                {{--<li class="dropdown-header">Dropdown heading</li>--}}
-                                {{--<li><a href="#">Action</a></li>--}}
-                                {{--<li><a href="#">Another action</a></li>--}}
-                                {{--<li><a href="#">Something else here</a></li>--}}
-                                {{--<li><a href="#">Separated link</a></li>--}}
-                                {{--<li><a href="#">One more separated link</a></li>--}}
-                            {{--</ul>--}}
-                        {{--</li>--}}
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-bank"></i> Игры</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-dropbox"></i> Фотогалерея</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-twitter"></i> Моя творческая деятельность</a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- /#sidebar-wrapper -->
-            </div>
-
+            @include('categories/_categories')
 
             <div class="col-md-8">
                 <!-- Page Content -->
@@ -127,25 +78,13 @@
                         lacinia bibendum nulla sed consectetur.</p>
                 </div>
 
-                <!-- /#page-content-wrapper -->
             </div>
+
         </div>
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
 @endsection
 
-@section('script')
-    <script src="{{asset('/js/index.js')}}"></script>
+@section('scripts')
 @endsection
