@@ -10,151 +10,38 @@
                     Документы по образовательной деятельности
                 </h2>
                 <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <a href=""><h3 class="file-header">Образовательная программа для родителей.docx</h3></a>
-                    </div>
+                @php
+                    function human_filesize($bytes, $decimals = 2) {
+                    $sz = 'BKMGTP';
+                    $factor = floor((strlen($bytes) - 1) / 3);
+                    return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor] . 'b';
+                    }
+                @endphp
+                @foreach($data as $dataItem)
+                    <div class="row">
+                        <div class="col-xs-1" style="margin-left: 20px;">
+                            <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
+                        </div>
+                        <div class="col-xs-8">
+                            <a href="/education_documents/{{$dataItem->id}}.docx" download><h3
+                                        class="file-header">{{$dataItem->name}}.docx</h3></a>
+                        </div>
 
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
+                        <div class="col-xs-8">
+                            <span class="size-and-date">
+                                @php
+                                    echo human_filesize(filesize(public_path().'/education_documents/'.$dataItem->id.'.docx'));
+                                @endphp
+                                , {{$dataItem->created_at}}</span>
+                        </div>
+                        <div class="col-xs-2 down-button-container">
+                            <a href="" download>
+                                <button type="button" class="btn btn-primary down-button">Скачать</button>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-xs-2 down-button-container">
-                        <a href="" download><button type="button" class="btn btn-primary down-button">Скачать</button></a>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <h3 class="file-header">Образовательная программа для родителей</h3>
-                    </div>
-
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
-                    </div>
-                    <div class="col-xs-2 down-button-container">
-                        <button type="button" class="btn btn-primary down-button">Скачать</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <h3 class="file-header">Образовательная программа для родителей</h3>
-                    </div>
-
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
-                    </div>
-                    <div class="col-xs-2 down-button-container">
-                        <button type="button" class="btn btn-primary down-button">Скачать</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <h3 class="file-header">Образовательная программа для родителей</h3>
-                    </div>
-
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
-                    </div>
-                    <div class="col-xs-2 down-button-container">
-                        <button type="button" class="btn btn-primary down-button">Скачать</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <h3 class="file-header">Образовательная программа для родителей</h3>
-                    </div>
-
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
-                    </div>
-                    <div class="col-xs-2 down-button-container">
-                        <button type="button" class="btn btn-primary down-button">Скачать</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <h3 class="file-header">Образовательная программа для родителей</h3>
-                    </div>
-
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
-                    </div>
-                    <div class="col-xs-2 down-button-container">
-                        <button type="button" class="btn btn-primary down-button">Скачать</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <h3 class="file-header">Образовательная программа для родителей</h3>
-                    </div>
-
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
-                    </div>
-                    <div class="col-xs-2 down-button-container">
-                        <button type="button" class="btn btn-primary down-button">Скачать</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <h3 class="file-header">Образовательная программа для родителей</h3>
-                    </div>
-
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
-                    </div>
-                    <div class="col-xs-2 down-button-container">
-                        <button type="button" class="btn btn-primary down-button">Скачать</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-xs-1" style="margin-left: 20px;">
-                        <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
-                    </div>
-                    <div class="col-xs-8">
-                        <h3 class="file-header">Образовательная программа для родителей</h3>
-                    </div>
-
-                    <div class="col-xs-8">
-                        <span class="size-and-date">9 МБ, 14 января 2018</span>
-                    </div>
-                    <div class="col-xs-2 down-button-container">
-                        <button type="button" class="btn btn-primary down-button">Скачать</button>
-                    </div>
-                </div>
-                <hr>
-
+                    <hr>
+                @endforeach
 
 
             </div>
@@ -163,17 +50,20 @@
 
     <br>
 
+    {{-- COMMENTS --}}
+
     <div class="container-fluid" style="padding-top: 10px;">
         <div class="row">
             <div class="col-xs-3"></div>
             <div class="col-xs-8 work-container-item">
                 <div class="comments" style="font-size: 30px; text-align: center;">
-                    Комментарии(0)
+                    Комментарии({{$qComments}})
                 </div>
 
                 <hr>
 
                 <form class="form-horizontal" method="post">
+                    {{csrf_field()}}
                     <div class="form-group">
                         <label for="inputName" class="control-label col-xs-2">* Введите имя:</label>
                         <div class="col-xs-5">
@@ -185,13 +75,7 @@
                         <label for="inputEmail" class="control-label col-xs-2">Ваш email:</label>
                         <div class="col-xs-5">
                             <input type="email" name="password" class="form-control" id="inputEmail"
-                                   placeholder="Email:"
-                                   value="">
-
-                        </div>
-                        <div id="passError" class="col-xs-1 alert alert-warning" hidden>Длина пароля должна быть не
-                            менее 4-х
-                            символов!
+                                   placeholder="Email:" value="">
                         </div>
                     </div>
                     <div class="form-group">
@@ -210,55 +94,22 @@
                 </form>
 
                 <hr>
-                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="comments-user">#1 Мария </div>
+                @foreach($comments as $comment)
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="comments-user">#{{$comment->id}} {{$comment->name}}</div>
+                        </div>
+                        <div class="col-xs-offset-6 col-xs-3">
+                            <div class="comments-date"> 21-04-2015</div>
+                        </div>
+                        <br><br>
+                        <div class="col-xs-12 comments-message">
+                            {{$comment->message}}
+                        </div>
                     </div>
-                    <div class="col-xs-offset-6 col-xs-3">
-                        <div class="comments-date"> 21-04-2015</div>
-                    </div>
-                    <br><br>
-                    <div class="col-xs-12 comments-message">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium ad adipisci blanditiis dicta earum eos esse fugiat, fugit incidunt inventore laborum, mollitia possimus quae quo recusandae vel vero voluptatibus?
-                    </div>
-                </div>
-                <hr>                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="comments-user">#1 Мария </div>
-                    </div>
-                    <div class="col-xs-offset-6 col-xs-3">
-                        <div class="comments-date"> 21-04-2015</div>
-                    </div>
-                    <br><br>
-                    <div class="col-xs-12 comments-message">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium ad adipisci blanditiis dicta earum eos esse fugiat, fugit incidunt inventore laborum, mollitia possimus quae quo recusandae vel vero voluptatibus?
-                    </div>
-                </div>
-                <hr>                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="comments-user">#1 Мария </div>
-                    </div>
-                    <div class="col-xs-offset-6 col-xs-3">
-                        <div class="comments-date"> 21-04-2015</div>
-                    </div>
-                    <br><br>
-                    <div class="col-xs-12 comments-message">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium ad adipisci blanditiis dicta earum eos esse fugiat, fugit incidunt inventore laborum, mollitia possimus quae quo recusandae vel vero voluptatibus?
-                    </div>
-                </div>
-                <hr>                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="comments-user">#1 Мария </div>
-                    </div>
-                    <div class="col-xs-offset-6 col-xs-3">
-                        <div class="comments-date"> 21-04-2015</div>
-                    </div>
-                    <br><br>
-                    <div class="col-xs-12 comments-message">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium ad adipisci blanditiis dicta earum eos esse fugiat, fugit incidunt inventore laborum, mollitia possimus quae quo recusandae vel vero voluptatibus?
-                    </div>
-                </div>
-                <hr>
+
+                    <hr>
+                @endforeach
 
             </div>
         </div>

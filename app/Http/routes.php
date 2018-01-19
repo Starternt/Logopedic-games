@@ -8,9 +8,11 @@ Route::get('/', function () {
 // --- Categories routes BELOW ---
 
 Route::get('/education', 'EducationController@index');
+Route::post('/education', 'EducationController@create');
 Route::get('/information', 'InformationController@index');
 Route::get('/work', 'WorkController@index');
 Route::get('/work/{id}', 'WorkController@show');
+
 
 // --- Admin routes ---
 

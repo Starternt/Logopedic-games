@@ -10,8 +10,8 @@
                 <div class="breadcrumbs">
                     <ol class="breadcrumb">
                         <li><a href="/admin/cabinet">Админпанель</a></li>
-                        <li><a href="/admin/work">Управление моими увлечениями</a></li>
-                        <li class="active">Добавить элемент</li>
+                        <li><a href="/admin/education">Управление образовательной деятельностью</a></li>
+                        <li class="active">Добавить файл</li>
                     </ol>
                 </div>
 
@@ -22,14 +22,13 @@
                         <form action="" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <!-- enctype необходим для отправки изображения -->
-                            <p>Описание:</p>
-                            <textarea name="description" cols="140" rows="20"></textarea>
+                            <p>Наименование:</p>
+                            <textarea name="name" cols="140" rows="9"></textarea>
 
                             <br><br>
 
-                            <p>Изображение </p>
-                            <img src="" width="200" alt="">
-                            <input type="file" name="image" placeholder="Изображение для новости" value="">
+                            <p>Файл </p>
+                            <input type="file" name="document" placeholder="Документ в формате docx" value="">
                             <br><br><br>
                             <input type="submit" class="btn btn-default" name="submit" value="Сохранить">
                             <br><br><br>

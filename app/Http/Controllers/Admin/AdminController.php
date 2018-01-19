@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use Carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Models\Comment;
-use App\Http\Requests;
-use App\Models\Education;
 
-class EducationController extends Controller
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +16,7 @@ class EducationController extends Controller
      */
     public function index()
     {
-//        $education = new Education();
-        $dataFiles = Education::all();
-        $dataComments = Comment::where('category_id', '=', '4')->get();
-        $quantityComments = $dataComments->count();
-
-
-        return view('education.education', ['data' => $dataFiles, 'comments' => $dataComments, 'qComments' => $quantityComments]);
+        return view('admin.cabinet');
     }
 
     /**
@@ -31,20 +24,9 @@ class EducationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        if($request->isMethod('post')){
-            $comment = new Comment();
-            $comment->name = $request->input('name');
-            $comment->email = $request->input('email', 'empty');
-            $comment->message = $request->input('comment');
-            $comment->category_id = 4;
-            $comment->created_at = Carbon::now();
-            $comment->updated_at = Carbon::now();
-            $comment->save();
-
-        }
-        return redirect()->back();
+        //
     }
 
     /**

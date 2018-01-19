@@ -19,15 +19,15 @@ class AdminWorkController extends Controller
 
     public function create(Request $request, Work $work)
     {
-            if($request->isMethod('post')){
-                $data = $request->input('description');
-                $id = $work->addWork($data)->id;
-                if($request->hasFile('image')) {
-                    $file = $request->file('image');
-                    $file->move(public_path() . '/images/work/',"$id.jpg");
-                }
-                return redirect('/admin/work');
+        if ($request->isMethod('post')) {
+            $data = $request->input('description');
+            $id = $work->addWork($data)->id;
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $file->move(public_path() . '/images/work/', "$id.jpg");
             }
+            return redirect('/admin/work');
+        }
 
         return view('adminWork.add');
     }
