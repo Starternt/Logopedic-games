@@ -18,7 +18,9 @@
                              style="border-radius: 2px; float:left; margin-right: 15px;">
                         </a>
                         <div class="description-work">
-                            {{$item->description}}
+                            <p>
+                                {{$item->description}}
+                            </p>
                         </div>
                         <a href="/work/{{$item->id}}">
                             <div class="btn btn-default" style="position:absolute; bottom: 28px; right: 30px;">Открыть

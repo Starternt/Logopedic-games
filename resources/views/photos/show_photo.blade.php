@@ -30,6 +30,7 @@
                 <hr>
 
                 <form class="form-horizontal" method="post">
+                    {{csrf_field()}}
                     <div class="form-group">
                         <label for="inputName" class="control-label col-xs-2">* Введите имя:</label>
                         <div class="col-xs-5">
@@ -72,7 +73,9 @@
                         </div>
                         <br><br>
                         <div class="col-xs-12 comments-message">
-                            {{$comment->message}}
+                            <p>
+                                {{$comment->message}}
+                            </p>
                         </div>
                     </div>
 

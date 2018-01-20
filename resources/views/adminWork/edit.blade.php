@@ -22,9 +22,9 @@
                                       rows="20">{{$item->description}}</textarea>
 
                             <br><br>
-                            <p>Изображение для новости</p>
+                            <p>Изображение</p>
                             <img src="{{asset("/images/work/$item->id.jpg")}}" width="200" alt="">
-                            <input type="file" name="image" placeholder="Изображение для новости" value="">
+                            <input type="file" name="image" placeholder="Изображение" value="">
 
                             <br><br><br>
                             <input type="submit" class="btn btn-default" name="submit" value="Сохранить">

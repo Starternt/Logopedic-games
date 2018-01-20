@@ -15,10 +15,15 @@ Route::post('/information', 'InformationController@create')
 ;
 Route::get('/work', 'WorkController@index');
 Route::get('/work/{id}', 'WorkController@show');
+Route::post('/work/{id}', 'WorkController@create');
 
 Route::get('/photos', 'PhotoController@index');
 Route::get('/photos/{id}', 'PhotoController@show');
 
+Route::get('/games', 'GamesController@index');
+Route::get('/games/{id}', 'GamesController@show');
+
+Route::get('/about', 'AboutController@index');
 
 // --- Admin routes ---
 
@@ -45,6 +50,20 @@ Route::get('/admin/information/destroy/{id}', 'Admin\AdminInformationController@
 Route::post('/admin/information/add', 'Admin\AdminInformationController@create');
 Route::get('/admin/information/add', 'Admin\AdminInformationController@create');
 Route::get('/admin/information', 'Admin\AdminInformationController@index');
+
+Route::post('/admin/photos/edit/{id}', 'Admin\AdminPhotosController@edit');
+Route::get('/admin/photos/edit/{id}', 'Admin\AdminPhotosController@edit');
+Route::get('/admin/photos/destroy/{id}', 'Admin\AdminPhotosController@destroy');
+Route::post('/admin/photos/add', 'Admin\AdminPhotosController@create');
+Route::get('/admin/photos/add', 'Admin\AdminPhotosController@create');
+Route::get('/admin/photos', 'Admin\AdminPhotosController@index');
+
+Route::post('/admin/games/edit/{id}', 'Admin\AdminGamesController@edit');
+Route::get('/admin/games/edit/{id}', 'Admin\AdminGamesController@edit');
+Route::get('/admin/games/destroy/{id}', 'Admin\AdminGamesController@destroy');
+Route::post('/admin/games/add', 'Admin\AdminGamesController@create');
+Route::get('/admin/games/add', 'Admin\AdminGamesController@create');
+Route::get('/admin/games', 'Admin\AdminGamesController@index');
 
 
 

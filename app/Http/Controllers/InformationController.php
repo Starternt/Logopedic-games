@@ -8,7 +8,6 @@ use App\Models\Comment;
 use App\Http\Requests;
 use App\Models\Information;
 
-define('CATEGORY_ID', 5);
 
 class InformationController extends Controller
 {
@@ -19,8 +18,9 @@ class InformationController extends Controller
      */
     public function index()
     {
+        $category_id = 5;
         $dataFiles = Information::all();
-        $dataComments = Comment::where('category_id', '=', CATEGORY_ID)->get();
+        $dataComments = Comment::where('category_id', '=', $category_id)->get();
         $quantityComments = $dataComments->count();
 
         return view('information.information', ['data' => $dataFiles, 'comments' => $dataComments, 'qComments' => $quantityComments]);
@@ -34,12 +34,14 @@ class InformationController extends Controller
      */
     public function create(Request $request)
     {
+        $category_id = 5;
+
         if($request->isMethod('post')){
             $comment = new Comment();
             $comment->name = $request->input('name');
             $comment->email = $request->input('email', 'empty');
             $comment->message = $request->input('comment');
-            $comment->category_id = CATEGORY_ID;
+            $comment->category_id = $category_id;
             $comment->created_at = Carbon::now();
             $comment->updated_at = Carbon::now();
             $comment->save();

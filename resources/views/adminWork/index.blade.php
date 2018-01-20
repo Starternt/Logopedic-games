@@ -8,10 +8,10 @@
                 <div class="breadcrumbs">
                     <ol class="breadcrumb">
                         <li><a href="/admin/cabinet">Админпанель</a></li>
-                        <li class="active">Управление моими увлечениями</li>
+                        <li class="active">Управление фотогалереей</li>
                     </ol>
                 </div>
-                <a href="/admin/work/add" class="btn btn-success back"><i class="fa fa-plus"></i> Добавить
+                <a href="/admin/photos/add" class="btn btn-success back"><i class="fa fa-plus"></i> Добавить
                     элемент</a>
                 <h4>Список элементов</h4>
                 <br/>
@@ -29,9 +29,9 @@
                             <td>{{$item->id}}</td>
                             <td>{{$item->description}}</td>
                             <td>{{$item->created_at}}</td>
-                            <td><a href="/admin/work/edit/{{$item->id}}" title="Редактировать"><i
+                            <td><a href="/admin/photos/edit/{{$item->id}}" title="Редактировать"><i
                                             class="fa fa-pencil-square-o"></i></a></td>
-                            <td><a href="/admin/work/destroy/{{$item->id}}" title="Удалить"><i
+                            <td><a href="/admin/photos/destroy/{{$item->id}}" title="Удалить"><i
                                             class="fa fa-times"></i></a></td>
                         </tr>
                     @endforeach

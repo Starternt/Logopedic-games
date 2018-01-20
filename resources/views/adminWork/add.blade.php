@@ -29,7 +29,7 @@
 
                             <p>Изображение </p>
                             <img src="" width="200" alt="">
-                            <input type="file" name="image" placeholder="Изображение для новости" value="">
+                            <input type="file" name="image" placeholder="Изображение" value="">
                             <br><br><br>
                             <input type="submit" class="btn btn-default" name="submit" value="Сохранить">
                             <br><br><br>
