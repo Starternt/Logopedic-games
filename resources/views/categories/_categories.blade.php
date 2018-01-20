@@ -8,26 +8,23 @@
                 </a>
             </li>
             <li>
-                <a href="/"><i class="fa fa-fw fa-home"></i> Главная</a>
+                <a href="/" id="category0"><i class="fa fa-fw fa-home"></i> Главная</a>
             </li>
             <li>
-                <a href="/work"><i class="fa fa-fw fa-cog"></i> Мои увлечения</a>
+                <a href="/work" id="category1"><i class="fa fa-fw fa-cog"></i> Мои увлечения</a>
             </li>
             <li>
-                <a href="/games"><i class="fa fa-fw fa-bank"></i> Логопедические игры</a>
+                <a href="/games" id="category2"><i class="fa fa-fw fa-bank"></i> Логопедические игры</a>
             </li>
             <li>
-                <a href="/photos"><i class="fa fa-fw fa-dropbox"></i> Фотогалерея</a>
+                <a href="/photos" id="category3"><i class="fa fa-fw fa-dropbox"></i> Фотогалерея</a>
             </li>
             <li>
-                <a href="/education"><i class="fa fa-fw fa-folder"></i> Образовательная деятельность</a>
+                <a href="/education" id="category4"><i class="fa fa-fw fa-folder"></i> Образовательная деятельность</a>
             </li>
             <li>
-                <a href="/information"><i class="fa fa-fw fa-file-o"></i> Информация для родителей</a>
+                <a href="/information" id="category5"><i class="fa fa-fw fa-file-o"></i> Информация для родителей</a>
             </li>
-
-
-
         </ul>
     </nav>
 </div>

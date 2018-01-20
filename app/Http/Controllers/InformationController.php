@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use App\Models\Comment;
 use App\Http\Requests;
+use App\Models\Information;
+
+define('CATEGORY_ID', 5);
 
 class InformationController extends Controller
 {
@@ -15,7 +19,12 @@ class InformationController extends Controller
      */
     public function index()
     {
-        return view('information.information');
+        $dataFiles = Information::all();
+        $dataComments = Comment::where('category_id', '=', CATEGORY_ID)->get();
+        $quantityComments = $dataComments->count();
+
+        return view('information.information', ['data' => $dataFiles, 'comments' => $dataComments, 'qComments' => $quantityComments]);
+
     }
 
     /**
@@ -23,9 +32,20 @@ class InformationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        if($request->isMethod('post')){
+            $comment = new Comment();
+            $comment->name = $request->input('name');
+            $comment->email = $request->input('email', 'empty');
+            $comment->message = $request->input('comment');
+            $comment->category_id = CATEGORY_ID;
+            $comment->created_at = Carbon::now();
+            $comment->updated_at = Carbon::now();
+            $comment->save();
+
+        }
+        return redirect()->back();
     }
 
     /**

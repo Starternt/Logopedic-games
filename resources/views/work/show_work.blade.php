@@ -13,7 +13,7 @@
             <div class="col-xs-3"></div>
             <div class="col-xs-8 work-container-item" style="padding: 0;">
                 <div class="work-content" style="margin: 2px; padding: 5px;!important;">
-                    <img src="{{asset('/images/myWork/1.jpg')}}" alt="image"
+                    <img src="{{asset('/images/work/'.$id.'.jpg')}}" alt="image"
                          style="width: 885px;">
                 </div>
             </div>
@@ -24,7 +24,7 @@
             <div class="col-xs-3"></div>
             <div class="col-xs-8 work-container-item">
                 <div class="comments" style="font-size: 30px; text-align: center;">
-                    Комментарии(0)
+                    Комментарии({{$quantityComments}})
                 </div>
 
                 <hr>
@@ -66,56 +66,22 @@
                 </form>
 
                 <hr>
-                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="comments-user">#1 Мария </div>
+                @foreach($comments as $comment)
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="comments-user">#{{$comment->id}} {{$comment->name}}</div>
+                        </div>
+                        <div class="col-xs-offset-6 col-xs-3">
+                            <div class="comments-date">{{$comment->created_at}}</div>
+                        </div>
+                        <br><br>
+                        <div class="col-xs-12 comments-message">
+                            {{$comment->message}}
+                        </div>
                     </div>
-                    <div class="col-xs-offset-6 col-xs-3">
-                        <div class="comments-date"> 21-04-2015</div>
-                    </div>
-                    <br><br>
-                    <div class="col-xs-12 comments-message">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium ad adipisci blanditiis dicta earum eos esse fugiat, fugit incidunt inventore laborum, mollitia possimus quae quo recusandae vel vero voluptatibus?
-                    </div>
-                </div>
-                <hr>                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="comments-user">#1 Мария </div>
-                    </div>
-                    <div class="col-xs-offset-6 col-xs-3">
-                        <div class="comments-date"> 21-04-2015</div>
-                    </div>
-                    <br><br>
-                    <div class="col-xs-12 comments-message">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium ad adipisci blanditiis dicta earum eos esse fugiat, fugit incidunt inventore laborum, mollitia possimus quae quo recusandae vel vero voluptatibus?
-                    </div>
-                </div>
-                <hr>                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="comments-user">#1 Мария </div>
-                    </div>
-                    <div class="col-xs-offset-6 col-xs-3">
-                        <div class="comments-date"> 21-04-2015</div>
-                    </div>
-                    <br><br>
-                    <div class="col-xs-12 comments-message">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium ad adipisci blanditiis dicta earum eos esse fugiat, fugit incidunt inventore laborum, mollitia possimus quae quo recusandae vel vero voluptatibus?
-                    </div>
-                </div>
-                <hr>                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="comments-user">#1 Мария </div>
-                    </div>
-                    <div class="col-xs-offset-6 col-xs-3">
-                        <div class="comments-date"> 21-04-2015</div>
-                    </div>
-                    <br><br>
-                    <div class="col-xs-12 comments-message">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium ad adipisci blanditiis dicta earum eos esse fugiat, fugit incidunt inventore laborum, mollitia possimus quae quo recusandae vel vero voluptatibus?
-                    </div>
-                </div>
-                <hr>
 
+                    <hr>
+                @endforeach
             </div>
         </div>
     </div>

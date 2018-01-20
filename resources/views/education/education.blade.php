@@ -100,7 +100,7 @@
                             <div class="comments-user">#{{$comment->id}} {{$comment->name}}</div>
                         </div>
                         <div class="col-xs-offset-6 col-xs-3">
-                            <div class="comments-date"> 21-04-2015</div>
+                            <div class="comments-date">{{$comment->created_at}}</div>
                         </div>
                         <br><br>
                         <div class="col-xs-12 comments-message">
@@ -114,4 +114,12 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $(function () {
+            $('#category4').css({'background-color': '#D5D5D5'});
+        });
+    </script>
 @endsection

@@ -87,4 +87,9 @@
 @endsection
 
 @section('scripts')
+    <script>
+        $(function () {
+            $('#category0').css({'background-color': '#D5D5D5'});
+        });
+    </script>
 @endsection

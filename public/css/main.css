@@ -5,7 +5,8 @@
     background: url('/images/header.jpg') no-repeat;
     background-size: 100% 100%;
 }
-.head{
+
+.head {
 }
 
 body {
@@ -13,76 +14,122 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-.left{
+
+.left {
     position: absolute;
     float: left;
     margin-top: 30px;
 }
-#navheader{
+
+#navheader {
     background-color: #e67e22;
     border-color: #D35400;
     border-bottom-width: 3px;
 }
-#app-navbar-collapse ul li a{
+
+#app-navbar-collapse ul li a {
     color: #ECF0F1;
 }
-#brand{
+
+#brand {
     color: #ECF0F1;
 }
-.education-content{
+
+.education-content {
     background-color: #fff;
     /*height: 700px;*/
     border-radius: 10px;
-    box-shadow: 1px 0 5px -1px rgba(0,0,0,0.5);
-    margin-top:30px;
+    box-shadow: 1px 0 5px -1px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
 }
-.file-header{
+
+.file-header {
     margin: 0;
     padding-bottom: 17px;
     margin-top: -7px;
 }
-.size-and-date{
+
+.size-and-date {
     color: darkgray;
 }
-.down-button-container{
+
+.down-button-container {
     margin-top: -15px;
     margin-left: 50px;
 }
-.down-button{
+
+.down-button {
     margin-left: 30px;
 }
-.work-container{
+
+.work-container {
     margin-top: 30px;
 }
-.work-container-item{
+
+.work-container-item {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
     margin-bottom: 0px;
+
 }
-.work-content{
+
+.work-content {
     min-height: 330px;
     margin-top: 15px;
+    text-align: center;
 }
-.work-categories{
-    float:left;
+
+.work-categories {
+    float: left;
     position: fixed;
 }
-.comments{
+
+.comments {
     font-weight: bold;
     margin-top: 20px;
 }
-.comments-user{
+
+.comments-user {
     display: inline-block;
     font-weight: bold;
     font-size: 18px;
 }
-.comments-date{
+
+.comments-date {
     display: inline-block;
     position: absolute;
     right: 20px;
     cursor: pointer;
 }
-.comments-message{
+
+.comments-message {
     margin-bottom: 20px;
+}
+
+.description-work {
+    word-break: break-all;
+    text-align: left;
+}
+
+.pagination li {
+    margin-right: 0;
+}
+
+body div {
+    font-family: 'Roboto', sans-serif;
+}
+
+.image-gallery {
+    border-radius: 2px;
+    float: left;
+    margin-right: 15px;
+    max-width: 100%;
+    margin-bottom: 44px;
+}
+
+.open-button {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
 }

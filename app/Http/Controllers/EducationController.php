@@ -8,6 +8,8 @@ use App\Models\Comment;
 use App\Http\Requests;
 use App\Models\Education;
 
+define('CATEGORY_ID', 4);
+
 class EducationController extends Controller
 {
     /**
@@ -17,11 +19,9 @@ class EducationController extends Controller
      */
     public function index()
     {
-//        $education = new Education();
         $dataFiles = Education::all();
-        $dataComments = Comment::where('category_id', '=', '4')->get();
+        $dataComments = Comment::where('category_id', '=', CATEGORY_ID)->get();
         $quantityComments = $dataComments->count();
-
 
         return view('education.education', ['data' => $dataFiles, 'comments' => $dataComments, 'qComments' => $quantityComments]);
     }
@@ -38,7 +38,7 @@ class EducationController extends Controller
             $comment->name = $request->input('name');
             $comment->email = $request->input('email', 'empty');
             $comment->message = $request->input('comment');
-            $comment->category_id = 4;
+            $comment->category_id = CATEGORY_ID;
             $comment->created_at = Carbon::now();
             $comment->updated_at = Carbon::now();
             $comment->save();
