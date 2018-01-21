@@ -13,7 +13,7 @@ class PhotoController extends Controller
 
     public function index()
     {
-        $data = Gallery::paginate(2);
+        $data = Gallery::paginate(15);
 
         return view('photos.photos', ['data' => $data]);
     }

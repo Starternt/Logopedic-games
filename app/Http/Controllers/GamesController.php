@@ -16,11 +16,11 @@ class GamesController extends Controller
     {
         $category_id = 2;
 
-        $data = Games::paginate(2);
+        $data = Games::paginate(15);
         $dataComments = Games::select(DB::raw('games.id, COUNT(games.id) as amount'))
             ->join('comments', 'games.id', '=', 'comments.note_id')
             ->where('comments.category_id', '=', $category_id)
-            ->groupBy('games.id')->paginate(2);
+            ->groupBy('games.id')->paginate(15);
 
         $amountComments = [];
         foreach($dataComments as $item){

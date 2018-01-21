@@ -17,11 +17,11 @@ class WorkController extends Controller
     {
         $category_id = 1;
 
-        $data = Work::paginate(2);
+        $data = Work::paginate(15);
         $dataComments = Work::select(DB::raw('works.id, COUNT(works.id) as amount'))
             ->join('comments', 'works.id', '=', 'comments.note_id')
             ->where('comments.category_id', '=', $category_id)
-            ->groupBy('works.id')->paginate(2);
+            ->groupBy('works.id')->paginate(15);
 //        dd($dataComments);
         $amountComments = [];
         foreach($dataComments as $item){

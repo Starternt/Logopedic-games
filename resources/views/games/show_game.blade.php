@@ -37,7 +37,7 @@
                             </a>
                         </div>
                         <div class="col-xs-offset-10">
-                            <a href="/games_documents/{{$id}}.zip">
+                            <a href="/games_documents/{{$id}}.zip" download>
                                 <div class="btn btn-primary">
                                     Скачать
                                 </div>

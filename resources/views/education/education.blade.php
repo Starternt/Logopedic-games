@@ -35,7 +35,7 @@
                                 , {{$dataItem->created_at}}</span>
                         </div>
                         <div class="col-xs-2 down-button-container">
-                            <a href="" download>
+                            <a href="/education_documents/{{$dataItem->id}}.docx" download>
                                 <button type="button" class="btn btn-primary down-button">Скачать</button>
                             </a>
                         </div>

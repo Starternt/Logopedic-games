@@ -87,7 +87,7 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row ">
-                    <p class="pull-left" style="padding-top: 15px;">Malina0010@mail.ru</p>
+                    <p class="pull-left" style="padding-top: 15px;">Контакты: malina0010@mail.ru</p>
                     <p class="pull-right" style="padding-top: 15px;">Laktionova Irina</p>
                 </div>
             </div>
