@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Laktionova Irina</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -44,33 +44,38 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" id="brand" href="{{ url('/') }}">
-                    Laravel
+                    Laktionova Irina
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
+                {{--<ul class="nav navbar-nav">--}}
+                    {{--<li><a href="{{ url('/home') }}">Home</a></li>--}}
+                {{--</ul>--}}
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Войти</a></li>
-                        <li><a href="{{ url('/register') }}">Регистрация</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+                    <li><a href="/about">Об авторе</a></li>
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
+
+
+
+                    {{--@if (Auth::guest())--}}
+                        {{--<li><a href="{{ url('/login') }}">Войти</a></li>--}}
+                        {{--<li><a href="{{ url('/register') }}">Регистрация</a></li>--}}
+                    {{--@else--}}
+                        {{--<li class="dropdown">--}}
+                            {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">--}}
+                                {{--{{ Auth::user()->name }} <span class="caret"></span>--}}
+                            {{--</a>--}}
+
+                            {{--<ul class="dropdown-menu" role="menu">--}}
+                                {{--<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>--}}
+                            {{--</ul>--}}
+                        {{--</li>--}}
+                    {{--@endif--}}
                 </ul>
             </div>
         </div>
@@ -82,8 +87,8 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row ">
-                    <p class="pull-left" style="padding-top: 15px;">почта</p>
-                    <p class="pull-right" style="padding-top: 15px;">Сайт</p>
+                    <p class="pull-left" style="padding-top: 15px;">Malina0010@mail.ru</p>
+                    <p class="pull-right" style="padding-top: 15px;">Laktionova Irina</p>
                 </div>
             </div>
         </div>

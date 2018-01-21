@@ -13,8 +13,9 @@ body {
 #page-content-wrapper {
   background-color: #fff;
   border-radius: 15px;
-  opacity: 0.7;
+  opacity: 0.85;
   padding: 20px;
+  margin-top: -10px;
   padding-top: 0;
 }
 #sidebar-wrapper {

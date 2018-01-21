@@ -4,7 +4,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 col-md-offset-3 head">
+            <div class="col-md-8 col-xs-offset-3 head">
                 <div class="header"></div>
             </div>
         </div>

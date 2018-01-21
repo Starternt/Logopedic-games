@@ -15,12 +15,15 @@ class WorkController extends Controller
 
     public function index()
     {
+        $category_id = 1;
+
         $data = Work::paginate(2);
         $dataComments = Work::select(DB::raw('works.id, COUNT(works.id) as amount'))
-            ->join('comments', 'works.id', '=', 'comments.note_id') //КАТЕГОРИЮ НЕ УЧЁЛ
+            ->join('comments', 'works.id', '=', 'comments.note_id')
+            ->where('comments.category_id', '=', $category_id)
             ->groupBy('works.id')->paginate(2);
-        dd($dataComments);
-        $amountComments = null;
+//        dd($dataComments);
+        $amountComments = [];
         foreach($dataComments as $item){
             $amountComments[] = $item->id;
         }
@@ -33,11 +36,7 @@ class WorkController extends Controller
         return view('work.my_work', ['data' => $data, 'amountComments' => $test]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create($id, Request $request)
     {
         $category_id = 1;
@@ -57,23 +56,13 @@ class WorkController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         $category_id = 1;
@@ -84,35 +73,19 @@ class WorkController extends Controller
         return view('work.show_work', ['comments' => $comments, 'id' => $id, 'quantityComments' => $quantityComments]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
         //

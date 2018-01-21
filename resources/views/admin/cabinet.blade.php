@@ -21,6 +21,7 @@
                     <li><a href="/admin/photos">Управление фотогалереей</a></li>
                     <li><a href="/admin/education">Управление образовательной деятельностью</a></li>
                     <li><a href="/admin/information">Управление информацией для родителей</a></li>
+                    <li><a href="/admin/comments">Управление комментариями</a></li>
                 </ul>
                 <br><br>
                 <div class="cabinet-options">

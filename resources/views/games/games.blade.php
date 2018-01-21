@@ -31,7 +31,7 @@
                                 {{$item->description}}
                             </p>
                         </div>
-                        <a href="/games_documents/{{$item->id}}.zip">
+                        <a href="/games_documents/{{$item->id}}.zip" download>
                             <div class="btn btn-primary" style="position:absolute; bottom: 28px; right: 240px;">
                                 Скачать
                             </div>

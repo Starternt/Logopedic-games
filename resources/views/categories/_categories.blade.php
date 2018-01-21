@@ -25,6 +25,9 @@
             <li>
                 <a href="/information" id="category5"><i class="fa fa-fw fa-file-o"></i> Информация для родителей</a>
             </li>
+            <li>
+                <a href="/about" id="category6"><i class="fa fa-fw fa-file-o"></i> Контакты</a>
+            </li>
         </ul>
     </nav>
 </div>

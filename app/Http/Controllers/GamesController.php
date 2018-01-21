@@ -14,9 +14,12 @@ class GamesController extends Controller
 
     public function index()
     {
+        $category_id = 2;
+
         $data = Games::paginate(2);
         $dataComments = Games::select(DB::raw('games.id, COUNT(games.id) as amount'))
             ->join('comments', 'games.id', '=', 'comments.note_id')
+            ->where('comments.category_id', '=', $category_id)
             ->groupBy('games.id')->paginate(2);
 
         $amountComments = [];
