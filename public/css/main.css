@@ -5,6 +5,8 @@
     background-color: transparent;
     background: url('/images/header.jpg') no-repeat;
     background-size: 100% 100%;
+    border-radius: 17px;
+
 }
 
 .head {

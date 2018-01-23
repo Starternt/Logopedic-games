@@ -29,7 +29,9 @@ class Work extends Model
     {
         DB::table('works')->where('id', '=', $id)->delete();
         $path = public_path();
-        unlink($path . '/images/work/' . $id . '.jpg');
+        if(file_exists($path . '/images/work/' . $id . '.jpg')){
+            unlink($path . '/images/work/' . $id . '.jpg');
+        }
         return true;
     }
 
