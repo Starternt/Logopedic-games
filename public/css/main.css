@@ -1,12 +1,20 @@
 .header {
-    height: 270px;
+    height: 280px;
     width: 100%;
     display: block;
     background-color: transparent;
     background: url('/images/header.jpg') no-repeat;
     background-size: 100% 100%;
     border-radius: 17px;
-
+}
+.photo{
+    height: 280px;
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    background: url('/images/mainphoto.jpg') no-repeat;
+    background-size: 100% 100%;
+    border-radius: 7px;
 }
 
 .head {
@@ -182,11 +190,17 @@ html {
     .header{
         height: 350px;
     }
+    .photo{
+        height: 350px;
+    }
 }
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 1001px) and (max-width: 1150px) {
     .header{
+        height: 240px;
+    }
+    .photo{
         height: 240px;
     }
     #sidebar-wrapper{
@@ -198,6 +212,9 @@ html {
     .header{
         height: 240px;
     }
+    .photo{
+        height: 0;
+    }
     #sidebar-wrapper{
         width: 190px;
     }
@@ -207,6 +224,9 @@ html {
 @media (min-width: 600px) and (max-width: 799px) {
     .header{
         height: 200px;
+    }
+    .photo{
+        height: 0;
     }
     #sidebar-wrapper{
         width: 140px;
@@ -218,8 +238,14 @@ html {
     .header{
         height: 190px;
     }
+    .photo{
+        height: 0;
+    }
     #sidebar-wrapper{
         width: 150px;
     }
 }
-
+.main-text{
+    text-align:justify;
+    font-size: 16px;
+}

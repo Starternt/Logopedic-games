@@ -4,7 +4,10 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 col-xs-offset-3 head">
+            <div class="col-md-3">
+                <div class="photo"></div>
+            </div>
+            <div class="col-md-8 head">
                 <div class="header"></div>
             </div>
         </div>
@@ -18,64 +21,44 @@
             <div class="col-md-8">
                 <!-- Page Content -->
                 <div id="page-content-wrapper">
-                    <h1 class="page-header">Awesome Bootstrap 3 Sidebar Navigation</h1>
-                    <p class="lead">Originally authored by <a href="https://bootsnipp.com/maridlcrmn">maridlcrmn</a>
-                        on Bootsnipp and then converted to Less and customized further by <a
-                                href="http://twiter.com/j_holtslander">j_holtslander</a> who is building a <a
-                                href="https://codepen.io/collection/nJGkWV" target="_new">collection</a> of great
-                        Bootstrap 3 navbars.</p>
-                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est
-                        at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                        ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis
-                        euismod. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra
-                        augue.</p>
-                    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus
-                        posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac,
-                        vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                        ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Duis mollis, est
-                        non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean
-                        lacinia bibendum nulla sed consectetur.</p>
-                    <h3>A heading in the mix.</h3>
-                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante
-                        venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.
-                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis
-                        consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Praesent commodo
-                        cursus magna, vel scelerisque nisl consectetur et.</p>
-                    <blockquote>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere
-                        consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem
-                        malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae
-                        elit libero, a pharetra augue.
-                    </blockquote>
-                    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus
-                        posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac,
-                        vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                        ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Duis mollis, est
-                        non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean
-                        lacinia bibendum nulla sed consectetur.</p>
-                    <h3>Another heading for typography's sake.</h3>
-                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante
-                        venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.
-                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis
-                        consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Praesent commodo
-                        cursus magna, vel scelerisque nisl consectetur et.</p>
-                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est
-                        at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                        ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis
-                        euismod. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra
-                        augue.</p>
-                    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus
-                        posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.</p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac,
-                        vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                        ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Duis mollis, est
-                        non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean
-                        lacinia bibendum nulla sed consectetur.</p>
+                    <h2 class="page-header" style="text-align: center; padding-top: 25px;">Как хорошо, когда ребёнок
+                        счастлив!<br>
+                        И голосок от радости звенит!<br>
+                        В судьбе его немножко поучаствуй,<br>
+                        Судьба тебя за это наградит!<br>
+                    </h2>
+                    <h3 style="text-align:center; color: mediumblue;">
+                        Мой девиз
+                    </h3>
+                    <p style="text-align:center; font-size: 20px;">
+                        «Хочешь сделать хорошо, сделай это сам!»
+                    </p>
+                    <h3 style="text-align:center; color: mediumblue;">
+                        О себе
+                    </h3>
+
+                    <p class="main-text"> Однажды, когда я училась в шестом классе, к нам в школу пришли преподаватели
+                        из педагогического
+                        училища. И я совершенно случайно оказалась на этой встрече. С тех пор я начала мечтать о том,
+                        что когда-нибудь стану учителем начальных классов. Именно поэтому сразу после восьмого класса я
+                        поступила в Барнаульское педагогическое училище № 2. И закончила его в 1990 году.</p>
+                    <p class="main-text">Однако, в силу семейных обстоятельств, свою педагогическую деятельность начала
+                        в детском саду в качестве руководителя изостудии. Затем много лет проработала в детском саду для
+                        глухих и слабослышащих детей также в качестве руководителя изостудии. .</p>
+                    <p class="main-text"> В 2011 году закончила педагогический институт в городе Славянске – на – Кубани
+                        по специальности «сурдопедагог». В настоящее время продолжаю свою педагогическую деятельность в
+                        детском саду комбинированного вида № 12 Белоглинского района Краснодарского края в качестве
+                        учителя-логопеда в группе для детей с ОНР и ТНР. Могу с большой уверенностью сказать о том, что
+                        профессию свою люблю.</p>
+                    <h3 style="text-align:center; color: mediumblue;">
+                        Мой взгляд на мир
+                    </h3>
+                    <p style="text-align: center; font-size: 18px;">Твёрдо уверена в том, что плохих детей нет – есть плохие взрослые.
+                        <br>
+                        Полностью согласна с изречением:
+                        <br>
+                        «Никем не любимый ребенок перестает быть ребенком: он лишь маленький беззащитный взрослый» (Жильбер Сесброн)
+                    </p>
                 </div>
 
             </div>
