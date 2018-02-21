@@ -23,7 +23,7 @@
                             <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
                         </div>
                         <div class="col-xs-8">
-                            <a href="/education_documents/{{$dataItem->id}}.docx" download><h3
+                            <a href="/education_documents/{{$dataItem->id}}.docx" style="outline: 0;" download><h3
                                         class="file-header">{{$dataItem->name}}.docx</h3></a>
                         </div>
 

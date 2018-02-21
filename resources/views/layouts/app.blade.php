@@ -58,7 +58,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    <li><a href="/about">Об авторе</a></li>
+                    <li><a href="/about" id="brand">Об авторе</a></li>
 
 
 

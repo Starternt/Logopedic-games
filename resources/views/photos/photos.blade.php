@@ -8,18 +8,18 @@
         </div>
     </div>
     @foreach($data as $item)
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="row work-container">
                     <div class="col-xs-3"></div>
                     <div class="col-xs-8 work-container-item">
-                        <div class="work-content"  style="text-align: center;">
+                        <div class="work-content" style="text-align: center;">
                             <div class="description-work">
-                                <h5 style="text-align: center;">
+                                <h4 style="text-align: center;">
                                     {{$item->description}}
-                                </h5>
+                                </h4>
                             </div>
-                            <a href="/photos/{{$item->id}}">
+                            <a href="/photos/{{$item->id}}" style="outline: 0;">
                                 <img class="image-gallery" src="{{asset('/images/photos/'.$item->id.'.jpg')}}"
                                      alt="image" width="">
                             </a>

@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <div class="row work-container">
             <div class="col-xs-3"></div>
-            <div class="col-xs-8 work-container-item" style="padding: 0;">
+            <div class="col-xs-8 work-container-item" style="padding: 0; text-align: center;" >
                 <div class="work-content" style="margin: 2px; padding: 5px;!important;">
                     <img src="{{asset('/images/photos/'.$id.'.jpg')}}" alt="image"
                          style="width: 885px;">
