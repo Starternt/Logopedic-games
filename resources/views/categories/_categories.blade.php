@@ -26,6 +26,9 @@
                 <a href="/information" id="category5"><i class="fa fa-fw fa-info"></i> Информация для родителей</a>
             </li>
             <li>
+                <a href="/information" id="category7"><i class="fa fa-fw fa-trophy"></i> Мои достижения</a>
+            </li>
+            <li>
                 <a href="/about" id="category6"><i class="fa fa-fw fa-phone"></i> Контакты</a>
             </li>
         </ul>

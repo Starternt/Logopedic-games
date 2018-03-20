@@ -101,7 +101,7 @@ ul.sidebar-nav{
   background-color: #7C29A3;
 }
 .sidebar-nav li:nth-child(9):before {
-  background-color: #987dbf;
+  background-color: #3a414c;
 }
 .sidebar-nav li:hover:before {
   /*-webkit-transition: width 0.2s ease-in;*/
