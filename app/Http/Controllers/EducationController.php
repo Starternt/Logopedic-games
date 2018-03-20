@@ -9,7 +9,6 @@ use App\Http\Requests;
 use App\Models\Education;
 
 
-
 class EducationController extends Controller
 {
 
@@ -39,35 +38,5 @@ class EducationController extends Controller
 
         }
         return redirect()->back();
-    }
-
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-
-    public function show($id)
-    {
-        //
-    }
-
-
-    public function edit($id)
-    {
-        //
-    }
-
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-
-    public function destroy($id)
-    {
-        //
     }
 }

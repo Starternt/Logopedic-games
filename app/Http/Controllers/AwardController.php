@@ -3,25 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Work;
-use App\Http\Requests;
-use Illuminate\Database\Eloquent;
+use App\Models\Award;
 use App\Models\Comment;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class WorkController extends Controller
+class AwardController extends Controller
 {
-
     public function index()
     {
-        $category_id = 1;
+        $category_id = 6;
 
-        $data = Work::paginate(15);
-        $dataComments = Work::select(DB::raw('works.id, COUNT(works.id) as amount'))
-            ->join('comments', 'works.id', '=', 'comments.note_id')
+        $data = Award::paginate(15);
+        $dataComments = Award::select(DB::raw('awards.id, COUNT(awards.id) as amount'))
+            ->join('comments', 'awards.id', '=', 'comments.note_id')
             ->where('comments.category_id', '=', $category_id)
-            ->groupBy('works.id')->paginate(15);
+            ->groupBy('awards.id')->paginate(15);
         $amountComments = [];
         foreach($dataComments as $item){
             $amountComments[] = $item->id;
@@ -32,13 +29,13 @@ class WorkController extends Controller
         foreach($dataComments as $item){
             $test[$item['id']] = $item['amount'];
         }
-        return view('work.my_work', ['data' => $data, 'amountComments' => $test]);
+        return view('awards.my_award', ['data' => $data, 'amountComments' => $test]);
     }
 
 
     public function create($id, Request $request)
     {
-        $category_id = 1;
+        $category_id = 6;
 
         if($request->isMethod('post')){
             $comment = new Comment();
@@ -58,11 +55,11 @@ class WorkController extends Controller
 
     public function show($id)
     {
-        $category_id = 1;
+        $category_id = 6;
 
         $comments = Comment::where('category_id', '=', $category_id)->where('note_id', '=', $id)->get();
         $quantityComments = $comments->count();
 
-        return view('work.show_work', ['comments' => $comments, 'id' => $id, 'quantityComments' => $quantityComments]);
+        return view('awards.show_award', ['comments' => $comments, 'id' => $id, 'quantityComments' => $quantityComments]);
     }
 }

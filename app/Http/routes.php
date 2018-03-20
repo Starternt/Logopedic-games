@@ -8,14 +8,18 @@ Route::get('/', function () {
 // --- Categories routes BELOW ---
 
 Route::get('/education', 'EducationController@index');
-Route::post('/education', 'EducationController@create');
+Route::post('/education', 'EducationController@create'); //Comment
 
 Route::get('/information', 'InformationController@index');
-Route::post('/information', 'InformationController@create')
-;
+Route::post('/information', 'InformationController@create'); //Comment
+
 Route::get('/work', 'WorkController@index');
 Route::get('/work/{id}', 'WorkController@show');
 Route::post('/work/{id}', 'WorkController@create');
+
+Route::get('/awards', 'AwardController@index');
+Route::get('/awards/{id}', 'AwardController@show');
+Route::post('/awards/{id}', 'AwardController@create');
 
 Route::get('/photos', 'PhotoController@index');
 Route::get('/photos/{id}', 'PhotoController@show');
@@ -39,6 +43,15 @@ Route::get('/admin/work/destroy/{id}', 'Admin\AdminWorkController@destroy')->mid
 Route::post('/admin/work/add', 'Admin\AdminWorkController@create')->middleware('auth');;
 Route::get('/admin/work/add', 'Admin\AdminWorkController@create')->middleware('auth');;
 Route::get('/admin/work', 'Admin\AdminWorkController@index')->middleware('auth');;
+
+// --- Awards
+
+Route::post('/admin/awards/edit/{id}', 'Admin\AdminAwardsController@edit')->middleware('auth');;
+Route::get('/admin/awards/edit/{id}', 'Admin\AdminAwardsController@edit')->middleware('auth');;
+Route::get('/admin/awards/destroy/{id}', 'Admin\AdminAwardsController@destroy')->middleware('auth');;
+Route::post('/admin/awards/add', 'Admin\AdminAwardsController@create')->middleware('auth');;
+Route::get('/admin/awards/add', 'Admin\AdminAwardsController@create')->middleware('auth');;
+Route::get('/admin/awards', 'Admin\AdminAwardsController@index')->middleware('auth');;
 
 // --- Comments
 
