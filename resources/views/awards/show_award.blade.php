@@ -12,7 +12,7 @@
         <div class="row work-container">
             <div class="col-xs-3"></div>
             <div class="col-xs-8 work-container-item" style="padding: 0;">
-                <div class="work-content" style="margin: 2px; padding: 5px;!important;">
+                <div class="work-content" style="margin: 2px; padding: 5px;!important; text-align: center;">
                     <img src="{{asset('/images/awards/'.$id.'.jpg')}}" alt="image"
                          style="width: 885px;">
                 </div>

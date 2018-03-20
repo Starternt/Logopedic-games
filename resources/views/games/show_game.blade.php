@@ -12,7 +12,7 @@
         <div class="row work-container">
             <div class="col-xs-3"></div>
             <div class="col-xs-8 work-container-item" style="padding: 0;">
-                <div class="work-content" style="margin: 2px; padding: 5px;!important;">
+                <div class="work-content" style="margin: 2px; padding: 5px;!important; text-align: center;">
                     <div class="description-work">
                         <h4 style="text-align: center;">
                             {{$item[0]['name']}}

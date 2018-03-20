@@ -155,7 +155,7 @@ body div {
 
 .image-games {
     border-radius: 2px;
-    float: left;
+    /*float: left;*/
     margin-right: 15px;
     max-width: 100%;
     margin-bottom: 20px;
