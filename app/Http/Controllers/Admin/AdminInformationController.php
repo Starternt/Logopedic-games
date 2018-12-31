@@ -25,7 +25,8 @@ class AdminInformationController extends Controller
             $id = $information->addInformation($data)->id;
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
-                $file->move(public_path() . '/info_documents/', "$id.docx");
+                $extension = $file->getClientOriginalExtension();
+                $file->move(public_path() . '/info_documents/', "$id.$extension");
             }
             return redirect('/admin/information');
         }

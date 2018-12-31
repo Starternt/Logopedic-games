@@ -1,11 +1,10 @@
-#brand:hover {
-    color: white;
-}
-
 #brand {
     outline: 0;
 }
 
+#brand:hover {
+    color: white;
+}
 
 .header {
     height: 280px;
@@ -14,7 +13,7 @@
     background-color: transparent;
     background: url('/images/header.jpg') no-repeat;
     background-size: 100% 100%;
-    border-radius: 17px;
+    border-radius: 23px;
 }
 
 .photo {
@@ -91,10 +90,13 @@ body {
 
 .work-container-item {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0px;
+    margin-bottom: 0;
+}
 
+.work-container-item-fix {
+    padding-bottom: 30px;
 }
 
 .work-content {
@@ -150,12 +152,10 @@ body div {
     max-width: 100%;
     margin-bottom: 44px;
     max-height: 560px;
-    /*text-align: center;*/
 }
 
 .image-games {
     border-radius: 2px;
-    /*float: left;*/
     margin-right: 15px;
     max-width: 100%;
     margin-bottom: 20px;
@@ -200,16 +200,69 @@ html {
 #sidebar-wrapper {
     border-color: lightgray;
 }
-
-@media (min-width: 1600px) and (max-width: 2200px) {
+@media (min-width: 2201px) and (max-width: 8000px) {
     .header {
-        height: 350px;
+        height: 390px;
     }
 
     .photo {
-        height: 350px;
+        height: 390px;
+    }
+    .fadein {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        position: relative;
+        padding-bottom: 450px;
+    }
+
+    .fadein > img {
+        width: 100%;
+        text-align: center;
+        max-height: 450px;
     }
 }
+
+@media (min-width: 1600px) and (max-width: 2200px) {
+    .header {
+        height: 390px;
+    }
+
+    .photo {
+        height: 390px;
+    }
+    .fadein {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        position: relative;
+        padding-bottom: 450px;
+    }
+
+    .fadein > img {
+        width: 100%;
+        text-align: center;
+        max-height: 450px;
+    }
+}
+
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 1151px) and (max-width: 1599px) {
+    .fadein > img {
+        width: 100%;
+        text-align: center;
+        max-height: 300px;
+    }
+    .fadein {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        position: relative;
+        padding-bottom: 300px;
+    }
+}
+
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 1001px) and (max-width: 1150px) {
@@ -223,6 +276,18 @@ html {
 
     #sidebar-wrapper {
         width: 240px;
+    }
+    .fadein > img {
+        width: 100%;
+        text-align: center;
+        max-height: 300px;
+    }
+    .fadein {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        position: relative;
+        padding-bottom: 300px;
     }
 }
 
@@ -239,6 +304,18 @@ html {
     #sidebar-wrapper {
         width: 190px;
     }
+    .fadein > img {
+        width: 100%;
+        text-align: center;
+        max-height: 300px;
+    }
+    .fadein {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        position: relative;
+        padding-bottom: 300px;
+    }
 }
 
 /* Portrait tablets and small desktops */
@@ -253,6 +330,18 @@ html {
 
     #sidebar-wrapper {
         width: 140px;
+    }
+    .fadein > img {
+        width: 100%;
+        text-align: center;
+        max-height: 300px;
+    }
+    .fadein {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        position: relative;
+        padding-bottom: 300px;
     }
 }
 
@@ -269,9 +358,39 @@ html {
     #sidebar-wrapper {
         width: 150px;
     }
+    .fadein > img {
+        width: 100%;
+        text-align: center;
+        max-height: 300px;
+    }
+    .fadein {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        position: relative;
+        padding-bottom: 300px;
+    }
 }
 
 .main-text {
     text-align: justify;
     font-size: 16px;
 }
+
+.images {
+    text-align: center;
+}
+
+/*.fadein {*/
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    /*width: 50%;*/
+    /*position: relative;*/
+    /*padding-bottom: 450px;*/
+/*}*/
+
+/*.fadein > img {*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*max-height: 450px;*/
+/*}*/

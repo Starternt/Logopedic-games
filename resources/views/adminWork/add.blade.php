@@ -23,13 +23,13 @@
                             {{ csrf_field() }}
                             <!-- enctype необходим для отправки изображения -->
                             <p>Описание:</p>
-                            <textarea name="description" cols="140" rows="20"></textarea>
+                            <textarea name="description" cols="140" rows="20" required></textarea>
 
                             <br><br>
 
                             <p>Изображение </p>
                             <img src="" width="200" alt="">
-                            <input type="file" name="image" placeholder="Изображение" value="">
+                            <input type="file" name="image" placeholder="Изображение" value="" required>
                             <br><br><br>
                             <input type="submit" class="btn btn-default" name="submit" value="Сохранить">
                             <br><br><br>

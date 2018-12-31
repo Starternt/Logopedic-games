@@ -12,7 +12,7 @@
         <div class="row">
             <div class="row work-container">
                 <div class="col-xs-3"></div>
-                <div class="col-xs-8 work-container-item">
+                <div class="col-xs-8 work-container-item work-container-item-fix">
                     <div class="work-content">
                         <a href="/work/{{$item->id}}"><img src="{{asset('/images/work/'.$item->id.'.jpg')}}" alt="image" width="400px"
                              style="border-radius: 2px; float:left; margin-right: 15px;">

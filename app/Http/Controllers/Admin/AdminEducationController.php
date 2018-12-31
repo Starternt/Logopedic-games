@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Education;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -26,7 +26,8 @@ class AdminEducationController extends Controller
             $id = $education->addEducation($data)->id;
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
-                $file->move(public_path() . '/education_documents/', "$id.docx");
+                $extension = $file->getClientOriginalExtension();
+                $file->move(public_path() . '/education_documents/', "$id.$extension");
             }
             return redirect('/admin/education');
         }

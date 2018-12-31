@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News site</title>
+    <title>Страница не найдена</title>
 </head>
 <body>
 <h1 style="font-size: 180px; text-align: center; color: grey; margin-bottom: 30px;">404</h1>

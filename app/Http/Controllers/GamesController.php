@@ -62,14 +62,28 @@ class GamesController extends Controller
     }
 
 
-    public function show($id)
+    /**
+     * @param $id
+     * @param Comment $comment
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show($id, Comment $comment, Request $request)
     {
+        // check auth
+        $auth = false;
+        if (!is_null($request->user())) {
+            $auth = true;
+        }
         $category_id = 2;
+
         $item = Games::select(DB::raw('name, description'))->where('id', '=', $id)->get();
         $comments = Comment::where('category_id', '=', $category_id)->where('note_id', '=', $id)->get();
+        $responses = $comment->getResponsesToComments();
         $quantityComments = $comments->count();
 
-        return view('games.show_game', ['comments' => $comments, 'id' => $id, 'quantityComments' => $quantityComments, 'item' => $item]);
+        return view('games.show_game', ['comments' => $comments, 'id' => $id, 'quantityComments' => $quantityComments,
+            'item' => $item, 'responses' => $responses, 'auth' => $auth]);
     }
 
 

@@ -53,13 +53,26 @@ class AwardController extends Controller
     }
 
 
-    public function show($id)
+    /**
+     * @param $id
+     * @param Comment $comment
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show($id, Comment $comment, Request $request)
     {
+        // check auth
+        $auth = false;
+        if (!is_null($request->user())) {
+            $auth = true;
+        }
         $category_id = 6;
 
         $comments = Comment::where('category_id', '=', $category_id)->where('note_id', '=', $id)->get();
+        $responses = $comment->getResponsesToComments();
         $quantityComments = $comments->count();
 
-        return view('awards.show_award', ['comments' => $comments, 'id' => $id, 'quantityComments' => $quantityComments]);
+        return view('awards.show_award', ['comments' => $comments, 'id' => $id, 'quantityComments' => $quantityComments,
+            'responses' => $responses, 'auth' => $auth]);
     }
 }

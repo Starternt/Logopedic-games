@@ -14,16 +14,44 @@ class InformationController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Comment $comment
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Comment $comment, Request $request)
     {
+        $auth = false;
+        if (!is_null($request->user())) {
+            $auth = true;
+        }
         $category_id = 5;
         $dataFiles = Information::all();
+
+        //start
+        $dir = base_path().'/public/info_documents';
+        $scan = scandir($dir);
+        foreach ($dataFiles as $file) {
+            $id = $file->id;
+            foreach ($scan as $item)
+            {
+                $itemExploded = explode('.', $item);
+                $name = $itemExploded[0];
+                if ($id == $name) {
+                    $extension = $itemExploded[1];
+                    $file->setAttribute('extension', $extension);
+                }
+            }
+
+        }
+        //end
+
         $dataComments = Comment::where('category_id', '=', $category_id)->get();
+        $responses = $comment->getResponsesToComments();
+
         $quantityComments = $dataComments->count();
 
-        return view('information.information', ['data' => $dataFiles, 'comments' => $dataComments, 'qComments' => $quantityComments]);
+        return view('information.information', ['data' => $dataFiles, 'comments' => $dataComments, 'qComments' => $quantityComments
+            , 'responses' => $responses, 'auth' => $auth]);
 
     }
 

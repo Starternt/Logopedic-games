@@ -1,6 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter50186065 = new Ya.Metrika2({
+                        id: 50186065,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) {
+                }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks2");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/50147173" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <div class="container-fluid">
         <div class="row">
@@ -12,7 +47,22 @@
             </div>
         </div>
     </div>
+    <style>
+        @keyframes fade {
+            0%   { opacity: 0; }
+            11.11%   { opacity: 1; }
+            33.33%  { opacity: 1; }
+            44.44%  { opacity: 0; }
+            100% { opacity: 0; }
+        }
 
+        .fadein { }
+        .fadein img { position:absolute; left:0; right:0; opacity:0; animation-name: fade; animation-duration: 12s; animation-iteration-count: infinite; }
+        .fadein img:nth-child(1) { animation-delay: 0s;  }
+        .fadein img:nth-child(2) { animation-delay: 3s;  }
+        .fadein img:nth-child(3) { animation-delay: 6s;  }
+        .fadein img:nth-child(4) { animation-delay: 9s;  }
+    </style>
     <div class="container-fluid">
         <div class="row">
 
@@ -33,31 +83,28 @@
                     <p style="text-align:center; font-size: 20px;">
                         «Хочешь сделать хорошо, сделай это сам!»
                     </p>
-                    <h3 style="text-align:center; color: mediumblue;">
-                        О себе
-                    </h3>
 
-                    <p class="main-text"> Однажды, когда я училась в шестом классе, к нам в школу пришли преподаватели
-                        из педагогического
-                        училища. И я совершенно случайно оказалась на этой встрече. С тех пор я начала мечтать о том,
-                        что когда-нибудь стану учителем начальных классов. Именно поэтому сразу после восьмого класса я
-                        поступила в Барнаульское педагогическое училище № 2. И закончила его в 1990 году.</p>
-                    <p class="main-text">Однако, в силу семейных обстоятельств, свою педагогическую деятельность начала
-                        в детском саду в качестве руководителя изостудии. Затем много лет проработала в детском саду для
-                        глухих и слабослышащих детей также в качестве руководителя изостудии. .</p>
-                    <p class="main-text"> В 2011 году закончила педагогический институт в городе Славянске – на – Кубани
-                        по специальности «сурдопедагог». В настоящее время продолжаю свою педагогическую деятельность в
-                        детском саду комбинированного вида № 12 Белоглинского района Краснодарского края в качестве
-                        учителя-логопеда в группе для детей с ОНР и ТНР. Могу с большой уверенностью сказать о том, что
-                        профессию свою люблю.</p>
+                    <div class="images">
+                        <div class="fadein">
+                            <img src="{{asset("/images/index_page/1.jgp")}}">
+                            <img src="{{asset("/images/index_page/2.jpg")}}">
+                            <img src="{{asset("/images/index_page/3.jpg")}}">
+                            <img src="{{asset("/images/index_page/4.jpg")}}">
+                            <img src="{{asset("/images/index_page/5.jpg")}}">
+                        </div>
+                    </div>
+
+
                     <h3 style="text-align:center; color: mediumblue;">
                         Мой взгляд на мир
                     </h3>
-                    <p style="text-align: center; font-size: 18px;">Твёрдо уверена в том, что плохих детей нет – есть плохие взрослые.
+                    <p style="text-align: center; font-size: 18px;">Твёрдо уверена в том, что плохих детей нет – есть
+                        плохие взрослые.
                         <br>
                         Полностью согласна с изречением:
                         <br>
-                        «Никем не любимый ребенок перестает быть ребенком: он лишь маленький беззащитный взрослый» (Жильбер Сесброн)
+                        «Никем не любимый ребенок перестает быть ребенком: он лишь маленький беззащитный взрослый»
+                        (Жильбер Сесброн)
                     </p>
                 </div>
 

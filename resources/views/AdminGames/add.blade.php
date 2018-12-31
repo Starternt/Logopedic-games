@@ -35,9 +35,9 @@
                             <br><br><br>
 
                             <p>Архив с игрой в формате zip</p>
-                            <input type="file" name="document" placeholder="Архив с игрой" value="">
+                            <input type="file" name="document" placeholder="Архив с игрой" value="" required>
                             <br><br><br>
-                            <input type="submit" class="btn btn-default" name="submit" value="Сохранить" required>
+                            <input type="submit" class="btn btn-default" name="submit" value="Сохранить">
                             <br><br><br>
                         </form>
                     </div>

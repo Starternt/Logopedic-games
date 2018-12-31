@@ -21,7 +21,7 @@
                     <li><a href="/admin/photos">Управление фотогалереей</a></li>
                     <li><a href="/admin/education">Управление образовательной деятельностью</a></li>
                     <li><a href="/admin/information">Управление информацией для родителей</a></li>
-                    <li><a href="/admin/awards">Управление достижениями</a></li>
+					<li><a href="/admin/awards">Управление достижениями</a></li>
                     <li><a href="/admin/comments">Управление комментариями</a></li>
                 </ul>
                 <br><br>
@@ -29,6 +29,9 @@
                     <a href="/logout">
                         <button class="btn btn-default">Выйти из аккаунта</button>
                     </a>
+                    {{--<a href="/change">--}}
+                        {{--<button class="btn btn-default">Изменить пароль</button>--}}
+                    {{--</a>--}}
                 </div>
 
             </div>

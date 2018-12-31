@@ -22,20 +22,20 @@
                         <div class="col-xs-1" style="margin-left: 20px;">
                             <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
                         </div>
-                        <div class="col-xs-8">
-                            <a href="/education_documents/{{$dataItem->id}}.docx" style="outline: 0;" download><h3
-                                        class="file-header">{{$dataItem->name}}.docx</h3></a>
+                        <div class="col-xs-8" style="min-height: 60px;">
+                            <a href="/education_documents/{{$dataItem->id}}.{{$dataItem->extension}}" style="outline: 0;" download ><h3
+                                        class="file-header">{{$dataItem->name}}.{{$dataItem->extension}}</h3></a>
                         </div>
 
                         <div class="col-xs-8">
                             <span class="size-and-date">
                                 @php
-                                    echo human_filesize(filesize(public_path().'/education_documents/'.$dataItem->id.'.docx'));
+                                    echo human_filesize(filesize(public_path().'/education_documents/'.$dataItem->id.'.'.$dataItem->extension));
                                 @endphp
                                 , {{$dataItem->created_at}}</span>
                         </div>
-                        <div class="col-xs-2 down-button-container">
-                            <a href="/education_documents/{{$dataItem->id}}.docx" download>
+                        <div class="col-xs-2 down-button-container col-xs-offset-2">
+                            <a href="/education_documents/{{$dataItem->id}}.{{$dataItem->extension}}" download>
                                 <button type="button" class="btn btn-primary down-button">Скачать</button>
                             </a>
                         </div>
@@ -104,12 +104,38 @@
                         </div>
                         <br><br>
                         <div class="col-xs-12 comments-message">
-                            {{$comment->message}}
+                            <p>
+                                {{$comment->message}}
+                            </p>
+                            @if($auth == true)
+                                <button class="btn btn-default response" id="{{$comment->id}}">Ответить</button>
+                            @endif
+
                         </div>
                     </div>
+                    @foreach($responses as $response)
+                        @if($response->idComment == $comment->id)
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="alert alert-success"><b>Ответ администратора</b>
+                                        <div style="padding-left: 20px; padding-top: 15px;">{{$response->message}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
 
                     <hr>
                 @endforeach
+                @if($auth == true)
+                    <div class="col-xs-12 response-form" style="text-align: center;" hidden>
+                        <h2>Ответ на комментарий #<span id="id-comment"></span></h2>
+                        <textarea name="response" id="response-message" cols="100" rows="5"></textarea> <br> <br>
+                        <button class="btn btn-primary" id="send-response" style="margin-bottom: 10px;">Отправить
+                        </button>
+                    </div>
+                @endif
+
 
             </div>
         </div>
@@ -117,6 +143,46 @@
 @endsection
 
 @section('scripts')
+    @if($auth)
+        <script>
+            $(document).ready(function () {
+                $('.response').on('click', function () {
+                    var id = $(this).attr('id');
+                    $('#id-comment').text(id);
+                    $('.response-form').show();
+                    $('html, body').animate({scrollTop: $(document).height()}, 'slow');
+                });
+                $('#send-response').on('click', function () {
+                    var id = $('#id-comment').text();
+                    var message = $('#response-message').val();
+                    $.ajax({
+                        type: 'POST',
+                        data: "id="+id+"&message="+message,
+                        url: '/comment/response',
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        beforeSend: function() {
+                            $('#send-response').attr('disabled', 'disabled');
+                        },
+                        success: function(data){
+                            if (data.success === false) {
+                                alert(data.error);
+                                $('.response-form').hide();
+                            } else {
+                                location.reload();
+                            }
+                            $('#send-response').removeAttr('disabled');
+                        },
+                        error: function () {
+                            $('#send-response').removeAttr('disabled');
+                            alert("Error sending");
+                        }
+                    });
+                });
+            });
+        </script>
+    @endif
     <script>
         $(function () {
             $('#category4').css({'background-color': '#D5D5D5'});

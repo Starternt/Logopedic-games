@@ -8,7 +8,7 @@
                 <div class="breadcrumbs">
                     <ol class="breadcrumb">
                         <li><a href="/admin/cabinet">Админпанель</a></li>
-                        <li class="active">Управление образовательной деятельностью</li>
+                        <li class="active">Управление моими увлечениями</li>
                     </ol>
                 </div>
                 <a href="/admin/work/add" class="btn btn-success back"><i class="fa fa-plus"></i> Добавить

@@ -26,7 +26,22 @@ class Information extends Model
     public function destroyInformation($id){
         DB::table('information')->where('id', '=', $id)->delete();
         $path = public_path();
-        unlink($path.'/info_documents/'.$id.'.docx');
+
+        //start
+        $dir = base_path() . '/public/info_documents';
+        $scan = scandir($dir);
+        $extension = 'docx';
+        foreach ($scan as $item) {
+            $itemExploded = explode('.', $item);
+            $name = $itemExploded[0];
+            if ($id == $name) {
+                $extension = $itemExploded[1];
+            }
+        }
+
+        //end
+
+        unlink($path.'/info_documents/'.$id.'.'.$extension);
         return true;
     }
 

@@ -32,6 +32,16 @@ class AdminWorkController extends Controller
         return view('adminWork.add');
     }
 
+    public function store(Request $request)
+    {
+        //
+    }
+
+    public function show($id)
+    {
+        //
+    }
+
     public function edit($id, Work $work, Request $request)
     {
         if($request->isMethod('post')){
@@ -46,6 +56,11 @@ class AdminWorkController extends Controller
 
         $item = $work->getWorkItem($id);
         return view('adminWork.edit', ['item' => $item[0]]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        //
     }
 
     public function destroy($id, Work $work)

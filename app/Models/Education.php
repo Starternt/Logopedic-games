@@ -26,7 +26,22 @@ class Education extends Model
     public function destroyEducation($id){
         DB::table('education')->where('id', '=', $id)->delete();
         $path = public_path();
-        unlink($path.'/education_documents/'.$id.'.docx');
+
+        //start
+        $dir = base_path() . '/public/education_documents';
+        $scan = scandir($dir);
+        $extension = 'docx';
+        foreach ($scan as $item) {
+            $itemExploded = explode('.', $item);
+            $name = $itemExploded[0];
+            if ($id == $name) {
+                $extension = $itemExploded[1];
+            }
+        }
+
+        //end
+
+        unlink($path.'/education_documents/'.$id.'.'.$extension);
         return true;
     }
 

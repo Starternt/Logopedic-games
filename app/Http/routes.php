@@ -1,6 +1,5 @@
 <?php
 
-
 Route::get('/', function () {
     return view('index');
 });
@@ -8,11 +7,11 @@ Route::get('/', function () {
 // --- Categories routes BELOW ---
 
 Route::get('/education', 'EducationController@index');
-Route::post('/education', 'EducationController@create'); //Comment
+Route::post('/education', 'EducationController@create');
 
 Route::get('/information', 'InformationController@index');
-Route::post('/information', 'InformationController@create'); //Comment
-
+Route::post('/information', 'InformationController@create')
+;
 Route::get('/work', 'WorkController@index');
 Route::get('/work/{id}', 'WorkController@show');
 Route::post('/work/{id}', 'WorkController@create');
@@ -57,6 +56,7 @@ Route::get('/admin/awards', 'Admin\AdminAwardsController@index')->middleware('au
 
 Route::get('/admin/comments/destroy/{id}', 'Admin\AdminCommentsController@destroy')->middleware('auth');;
 Route::get('/admin/comments', 'Admin\AdminCommentsController@index')->middleware('auth');;
+Route::post('/comment/response', 'WorkController@response')->middleware('auth');
 
 // --- Education activity
 
