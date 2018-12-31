@@ -17,7 +17,7 @@
                 <a href="/work" id="category1"><i class="fa fa-fw fa-paper-plane-o"></i> Мои увлечения</a>
             </li>
             <li>
-                <a href="/games" id="category2"><i class="fa fa-fw fa-rocket"></i> Логопедические игры</a>
+                <a href="/games" id="category2"><i class="fa fa-fw fa-rocket"></i> Педагогическая копилка</a>
             </li>
             <li>
                 <a href="/photos" id="category3"><i class="fa fa-fw fa-picture-o"></i> Фотогалерея</a>

@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=700, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Laktionova Irina</title>
+    <meta name="description" content="Логопедический сайт Ирины Лактионовой: игры, биография, достижения, образовательная деятельность." />
+    <meta name="yandex-verification" content="9c5b9a8a504b24e4" />
+    <meta name='wmail-verification' content='e1d7d9b3d5b129ef4b15492f4881e139' />
+    <meta name="google-site-verification" content="CtjJuPRmEVw9AS4BNWMBttMnANK_1B_lgZbejjjhSDQ" />
+
+    <title>Логопед Лактионова Ирина</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <!-- Fonts -->
