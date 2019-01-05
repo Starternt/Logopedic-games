@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 /**
- * Class AboutController
+ * Class UsefulController
  * @package App\Http\Controllers
  */
-class AboutController extends Controller
+class UsefulController extends Controller
 {
 
     public function index()
     {
 
-        return view('about.about');
+        return view('useful.useful');
     }
 }

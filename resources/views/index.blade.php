@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('meta-description')
+
+    <meta name="description" content="Персональный сайт учителя-логопеда МБДОУ д/с № 12 с.Белая Глина Лактионовой Ирины." />
+
+@endsection
+
 @section('content')
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -67,15 +73,13 @@
         <div class="row">
 
             @include('categories/_categories')
+            @include('useful/_site_links')
 
             <div class="col-md-8">
                 <!-- Page Content -->
                 <div id="page-content-wrapper">
-                    <h2 class="page-header" style="text-align: center; padding-top: 25px;">Как хорошо, когда ребёнок
-                        счастлив!<br>
-                        И голосок от радости звенит!<br>
-                        В судьбе его немножко поучаствуй,<br>
-                        Судьба тебя за это наградит!<br>
+                    <h2 class="page-header" style="text-align: center; padding-top: 25px;">
+                        <i>Персональный сайт учителя-логопеда МБДОУ д/с №12 <br>Лактионовой Ирины Владимировны. <br> С.Белая Глина, Краснодарский край.</i>
                     </h2>
                     <h3 style="text-align:center; color: mediumblue;">
                         Мой девиз
@@ -98,14 +102,12 @@
                     <h3 style="text-align:center; color: mediumblue;">
                         Мой взгляд на мир
                     </h3>
-                    <p style="text-align: center; font-size: 18px;">Твёрдо уверена в том, что плохих детей нет – есть
-                        плохие взрослые.
-                        <br>
-                        Полностью согласна с изречением:
-                        <br>
+                    <p style="text-align: center; font-size: 18px;">
                         «Никем не любимый ребенок перестает быть ребенком: он лишь маленький беззащитный взрослый»
                         (Жильбер Сесброн)
                     </p>
+                    <hr>
+                    <p style="text-align: center;">Уважаемые посетители! В целях исполнения закона 152-РФ от 27.07.2014 "О защите персональных данных" все фото и видео материалы размещены мною с письменного согласия родителей (законных представителей).</p>
                 </div>
 
             </div>

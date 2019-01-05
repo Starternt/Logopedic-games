@@ -1,5 +1,4 @@
 <div class="col-xs-3 left">
-
     <nav class="navbar navbar-inverse" id="sidebar-wrapper" role="navigation">
         <ul class="nav sidebar-nav">
             <li class="sidebar-brand">
@@ -30,6 +29,9 @@
             </li>
 			<li>
                 <a href="/awards" id="category7"><i class="fa fa-fw fa-trophy"></i> Мои достижения</a>
+            </li>
+			<li>
+                <a href="/useful" id="category8"><i class="fa fa-fw fa-mortar-board"></i> Интересные сайты для педагогов и родителей</a>
             </li>
         </ul>
     </nav>

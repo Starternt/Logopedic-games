@@ -53,9 +53,8 @@
                     <div class="form-group">
                         <label for="inputComment" class="control-label col-xs-2">* Комментарий:</label>
                         <div class="col-xs-5">
-                            <input type="text" name="comment" class="form-control" id="inputComment"
-                                   placeholder="Комментарий:"
-                                   value="" required>
+                            <textarea name="comment" id="inputComment" cols="55" rows="7" required
+                                      style="width: 100%;" placeholder="Написать комментарий..."></textarea>
                         </div>
                     </div>
                     <div class="form-group">

@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('meta-description')
+
+    <meta name="description"
+          content="Консультации, практические задания. Развивающие игры и упражнения. Семинары и практические тренинги для родителей."/>
+
+@endsection
+
 @section('content')
 
     <div class="container-fluid">
@@ -23,7 +30,8 @@
                             <i class="fa fa-file-text fa-4x" aria-hidden="true" style="color: mediumblue"></i>
                         </div>
                         <div class="col-xs-8" style="min-height: 60px;">
-                            <a href="/info_documents/{{$dataItem->id}}.{{$dataItem->extension}}" style="outline: 0;" download><h3
+                            <a href="/info_documents/{{$dataItem->id}}.{{$dataItem->extension}}" style="outline: 0;"
+                               download><h3
                                         class="file-header">{{$dataItem->name}}.{{$dataItem->extension}}</h3></a>
                         </div>
 
@@ -81,9 +89,8 @@
                     <div class="form-group">
                         <label for="inputComment" class="control-label col-xs-2">* Комментарий:</label>
                         <div class="col-xs-5">
-                            <input type="text" name="comment" class="form-control" id="inputComment"
-                                   placeholder="Комментарий:"
-                                   value="" required>
+                            <textarea name="comment" id="inputComment" cols="55" rows="7" required
+                                      style="width: 100%;" placeholder="Написать комментарий..."></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -157,15 +164,15 @@
                     var message = $('#response-message').val();
                     $.ajax({
                         type: 'POST',
-                        data: "id="+id+"&message="+message,
+                        data: "id=" + id + "&message=" + message,
                         url: '/comment/response',
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
-                        beforeSend: function() {
+                        beforeSend: function () {
                             $('#send-response').attr('disabled', 'disabled');
                         },
-                        success: function(data){
+                        success: function (data) {
                             if (data.success === false) {
                                 alert(data.error);
                                 $('.response-form').hide();

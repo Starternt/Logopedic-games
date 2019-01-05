@@ -29,6 +29,7 @@ Route::get('/games/{id}', 'GamesController@show');
 Route::post('/games/{id}', 'GamesController@create');
 
 Route::get('/about', 'AboutController@index');
+Route::get('/useful', 'UsefulController@index');
 
 // --- Admin routes ---
 

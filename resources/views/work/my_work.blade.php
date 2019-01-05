@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('meta-description')
+
+    <meta name="description" content="Развивающие игры и игрушки из фетра и пряжи своими руками." />
+
+@endsection
+
 @section('content')
 
     <div class="container-fluid">

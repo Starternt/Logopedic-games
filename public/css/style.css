@@ -123,6 +123,10 @@ ul.sidebar-nav {
     background-color: #3a414c;
 }
 
+.sidebar-nav li:nth-child(10):before {
+    background-color: #f35503;
+}
+
 .sidebar-nav li:hover:before {
     /*-webkit-transition: width 0.2s ease-in;*/
     transition: width 0.2s ease;

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=700, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="Логопедический сайт Ирины Лактионовой: игры, биография, достижения, образовательная деятельность." />
+
+    @yield('meta-description')
+
     <meta name="yandex-verification" content="9c5b9a8a504b24e4" />
     <meta name='wmail-verification' content='e1d7d9b3d5b129ef4b15492f4881e139' />
     <meta name="google-site-verification" content="CtjJuPRmEVw9AS4BNWMBttMnANK_1B_lgZbejjjhSDQ" />
@@ -51,7 +53,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" id="brand" href="{{ url('/') }}">
-                    Laktionova Irina
+                    На главную
                 </a>
             </div>
 
@@ -95,7 +97,7 @@
             <div class="container">
                 <div class="row ">
                     <p class="pull-left" style="padding-top: 15px;">Контакты: malina0010@mail.ru</p>
-                    <p class="pull-right" style="padding-top: 15px;">Laktionova Irina</p>
+                    <p class="pull-right" style="padding-top: 15px;">Лактионова Ирина</p>
                 </div>
             </div>
         </div>
