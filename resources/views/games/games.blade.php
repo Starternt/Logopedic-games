@@ -72,7 +72,7 @@
 
                         <div style="clear: both; padding-bottom: 20px;">
                             <a href="/about">
-                                <p class="donate-text">Данная игра распространяется бесплатно, но вы можете отблагодарить автора!</p>
+                                <p class="donate-text"></p>
                             </a>
                         </div>
                     </div>
