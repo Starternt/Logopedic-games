@@ -70,10 +70,7 @@
                             </div>
                         </a>
 
-                        <div style="clear: both; padding-bottom: 20px;">
-                            <a href="/about">
-                                <p class="donate-text"></p>
-                            </a>
+                        <div style="clear: both; padding-bottom: 35px;">
                         </div>
                     </div>
                 </div>
